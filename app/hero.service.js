@@ -37,9 +37,9 @@ var HeroService = (function () {
             .then(function () { return null; })
             .catch(this.handleError);
     };
-    HeroService.prototype.create = function (name) {
+    HeroService.prototype.create = function (name, group) {
         return this.http
-            .post(this.heroesUrl, JSON.stringify({ name: name }), { headers: this.headers })
+            .post(this.heroesUrl, JSON.stringify({ name: name, group: group }), { headers: this.headers })
             .toPromise()
             .then(function (res) { return res.json().data; })
             .catch(this.handleError);
@@ -67,5 +67,5 @@ exports.HeroService = HeroService;
 Copyright 2016 Google Inc. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/ 
+*/
 //# sourceMappingURL=hero.service.js.map
