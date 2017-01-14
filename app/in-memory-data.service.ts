@@ -2,16 +2,16 @@ import { InMemoryDbService } from 'angular-in-memory-web-api';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     let heroes = [
-      {id: 153656, group: 'RDIR32', name: 'Mr. Nice'},
-      {id: 155452, group: 'RDIR32', name: 'Narco'},
-      {id: 153471, group: 'RDIR32', name: 'Bombasto'},
-      {id: 154251, group: 'RDIR32', name: 'Celeritas'},
-      {id: 152343, group: 'RDIR32', name: 'Magneta'},
-      {id: 154423, group: 'RDIR32', name: 'RubberMan'},
-      {id: 155412, group: 'RDIR31', name: 'Dynama'},
-      {id: 154211, group: 'RDIR31', name: 'Dr IQ'},
-      {id: 154631, group: 'RDIR31', name: 'Magma'},
-      {id: 154123, group: 'RDIR31', name: 'Tornado'}
+      {id: 153656, group: 'RDIR32', name: 'Minah Kim'},
+      {id: 155452, group: 'RDIR32', name: 'Jieun Han'},
+      {id: 153471, group: 'RDIR32', name: 'Aranzazu Torres'},
+      {id: 154251, group: 'RDIR32', name: 'Jon Kaasa'},
+      {id: 152343, group: 'RDIR32', name: 'Karina Flores'},
+      {id: 154423, group: 'RDIR32', name: 'Kathy Corey'},
+      {id: 155412, group: 'RDIR31', name: 'Kent Miller'},
+      {id: 154211, group: 'RDIR31', name: 'Robert King'},
+      {id: 154631, group: 'RDIR31', name: 'Kami Gunnoe'},
+      {id: 154123, group: 'RDIR31', name: 'Steve Heim'}
     ];
     return {heroes};
   }
