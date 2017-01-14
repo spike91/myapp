@@ -33,6 +33,11 @@ var HeroDetailComponent = (function () {
     HeroDetailComponent.prototype.goBack = function () {
         this.location.back();
     };
+    HeroDetailComponent.prototype.delete = function (hero) {
+        var _this = this;
+        this.heroService.delete(hero.id)
+            .then(function () { return _this.goBack(); });
+    };
     HeroDetailComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
@@ -49,5 +54,5 @@ exports.HeroDetailComponent = HeroDetailComponent;
 Copyright 2016 Google Inc. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
-*/ 
+*/
 //# sourceMappingURL=hero-detail.component.js.map

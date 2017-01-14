@@ -24,6 +24,7 @@ var hero_detail_component_1 = require('./hero-detail.component');
 var hero_service_1 = require('./hero.service');
 var hero_search_component_1 = require('./hero-search.component');
 var rdir31_component_1 = require('./rdir31.component');
+var rdir32_component_1 = require('./rdir32.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -42,7 +43,8 @@ var AppModule = (function () {
                 hero_detail_component_1.HeroDetailComponent,
                 heroes_component_1.HeroesComponent,
                 hero_search_component_1.HeroSearchComponent,
-                rdir31_component_1.Rdir31Component
+                rdir31_component_1.Rdir31Component,
+                rdir32_component_1.Rdir32Component
             ],
             providers: [hero_service_1.HeroService],
             bootstrap: [app_component_1.AppComponent]

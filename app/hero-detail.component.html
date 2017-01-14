@@ -1,4 +1,4 @@
-<div *ngIf="hero">
+<div *ngIf="hero" (click)="onSelect(hero)" [class.selected]="hero === selectedHero">
   <h2>{{hero.name}} details!</h2>
   <div>
     <label>id: </label>{{hero.id}}
@@ -7,6 +7,7 @@
     <br>
     <label>name: </label>{{hero.name}}</div>
   <button (click)="goBack()">Back</button>
+  <button (click)="delete(hero); $event.stopPropagation(); goBack()">Delete</button>
 </div>
 
 

@@ -6,10 +6,18 @@
     </div>
   </a>
 </div>
+<div>
+  <label>Hero name:</label> <input #heroName />
+<br>
+  <label>Hero group:</label> <input #heroGroup />
+  <button (click)="add(heroName.value, heroGroup.value); heroName.value=''; heroGroup.value=''">
+    Add
+  </button>
+</div>
 <hero-search></hero-search>
 
 
-<!-- 
+<!--
 Copyright 2016 Google Inc. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license

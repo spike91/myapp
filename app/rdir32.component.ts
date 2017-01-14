@@ -1,20 +1,66 @@
-<h2>My Heroes</h2>
-<div>
-  <label>Hero name:</label> <input #heroName />
-<br>
-  <label>Hero group:</label> <input #heroGroup />
-  <button (click)="add(heroName.value, heroGroup.value); heroName.value=''; heroGroup.value=''">
-    Add
-  </button>
-</div>
-<ul class="heroes">
-  <li *ngFor="let hero of heroes" (click)="onSelect(hero)"
-      [class.selected]="hero === selectedHero">
-    <span class="badge">{{hero.group}}</span>
-    <span>{{hero.name}}</span>
+import { Component, OnInit } from '@angular/core';
+import { Router }            from '@angular/router';
+import { Hero }                from './hero';
+import { HeroService }         from './hero.service';
+import { HeroesComponent }     from './heroes.component'
+@Component({
+  moduleId: module.id,
+  selector: 'my-rdir32',
+  templateUrl: 'rdir32.component.html',
+  styleUrls: [ 'rdir32.component.css' ]
+})
+export class Rdir32Component implements OnInit {
+  heroes: Hero[];
+  selectedHero: Hero;
 
-    <button class="delete"
-      (click)="delete(hero); $event.stopPropagation()">x</button>
-      <button class="delete" (click)="gotoDetail()">View </button>
-  </li>
-</ul>
+  constructor(
+    private heroService: HeroService,
+    private router: Router) { }
+
+  getHeroes(): void {
+    this.heroService
+        .getHeroes()
+        .then(heroes => this.heroes = heroes);
+  }
+
+  add(name: string, group: string): void {
+    name = name.trim();
+    group = group.trim();
+    if (!name) { return; }
+    if (!group) { return; }
+    this.heroService.create(name, group)
+      .then(hero => {
+        this.heroes.push(hero);
+        this.selectedHero = null;
+      });
+  }
+
+
+  delete(hero: Hero): void {
+    this.heroService
+        .delete(hero.id)
+        .then(() => {
+          this.heroes = this.heroes.filter(h => h !== hero);
+          if (this.selectedHero === hero) { this.selectedHero = null; }
+        });
+  }
+
+  ngOnInit(): void {
+    this.getHeroes();
+  }
+
+  onSelect(hero: Hero): void {
+    this.selectedHero = hero;
+  }
+
+  gotoDetail(): void {
+    this.router.navigate(['/detail', this.selectedHero.id]);
+  }
+}
+
+
+/*
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/

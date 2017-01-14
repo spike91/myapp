@@ -2,9 +2,10 @@ import 'rxjs/add/operator/switchMap';
 import { Component, OnInit }      from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
-
+import { Rdir32Component } from './rdir32.component';
 import { Hero }        from './hero';
 import { HeroService } from './hero.service';
+
 
 @Component({
   moduleId: module.id,
@@ -35,6 +36,12 @@ export class HeroDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+
+  delete(hero: Hero): void {
+    this.heroService.delete(hero.id)
+    .then(() => this.goBack());
+  }
+
 }
 
 

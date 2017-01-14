@@ -5,13 +5,15 @@ import { DashboardComponent }   from './dashboard.component';
 import { HeroesComponent }      from './heroes.component';
 import { HeroDetailComponent }  from './hero-detail.component';
 import { Rdir31Component }  from './rdir31.component';
+import { Rdir32Component }  from './rdir32.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard',  component: DashboardComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'heroes',     component: HeroesComponent },
-  { path: 'rdir31',     component: Rdir31Component }
+  { path: 'rdir31',     component: Rdir31Component },
+  { path: 'rdir32',     component: Rdir32Component }
 ];
 
 @NgModule({

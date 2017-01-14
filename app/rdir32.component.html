@@ -8,13 +8,14 @@
   </button>
 </div>
 <ul class="heroes">
-  <li *ngFor="let hero of heroes" (click)="onSelect(hero)"
+  <p *ngFor="let hero of heroes" (click)="onSelect(hero)"
       [class.selected]="hero === selectedHero">
-    <span class="badge">{{hero.group}}</span>
+  <li *ngIf="hero.group==='RDIR32'">
+    <span class="badge" >{{hero.id}}</span>
     <span>{{hero.name}}</span>
-
     <button class="delete"
       (click)="delete(hero); $event.stopPropagation()">x</button>
-      <button class="badge" (click)="gotoDetail()">View </button>
-  </li>
+      <button class="delete" (click)="gotoDetail()">View </button>
+</li>
+</p>
 </ul>

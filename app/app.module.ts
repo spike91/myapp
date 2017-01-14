@@ -18,6 +18,8 @@ import { HeroDetailComponent }  from './hero-detail.component';
 import { HeroService }          from './hero.service';
 import { HeroSearchComponent }  from './hero-search.component';
 import { Rdir31Component }      from './rdir31.component';
+import { Rdir32Component }      from './rdir32.component';
+
 @NgModule({
   imports: [
     BrowserModule,
@@ -32,7 +34,8 @@ import { Rdir31Component }      from './rdir31.component';
     HeroDetailComponent,
     HeroesComponent,
     HeroSearchComponent,
-    Rdir31Component
+    Rdir31Component,
+    Rdir32Component
   ],
   providers: [ HeroService ],
   bootstrap: [ AppComponent ]
