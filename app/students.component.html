@@ -1,0 +1,17 @@
+<h2>All students</h2>
+
+<ul class="students">
+  <li *ngFor="let student of students" (click)="onSelect(student)"
+      [class.selected]="student === selectedStudent" (click)="gotoDetail()">
+    <span class="badge">{{student.group}}</span>
+    <span >{{student.name}}</span>
+  </li>
+</ul>
+
+
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

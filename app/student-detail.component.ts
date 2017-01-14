@@ -3,33 +3,33 @@ import { Component, OnInit }      from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
 import { Rdir32Component } from './rdir32.component';
-import { Hero }        from './hero';
-import { HeroService } from './hero.service';
+import { Student }        from './student';
+import { StudentService } from './student.service';
 
 
 @Component({
   moduleId: module.id,
-  selector: 'my-hero-detail',
-  templateUrl: 'hero-detail.component.html',
-  styleUrls: [ 'hero-detail.component.css' ]
+  selector: 'my-student-detail',
+  templateUrl: 'student-detail.component.html',
+  styleUrls: [ 'student-detail.component.css' ]
 })
-export class HeroDetailComponent implements OnInit {
-  hero: Hero;
+export class StudentDetailComponent implements OnInit {
+  student: Student;
 
   constructor(
-    private heroService: HeroService,
+    private studentService: StudentService,
     private route: ActivatedRoute,
     private location: Location
   ) {}
 
   ngOnInit(): void {
     this.route.params
-      .switchMap((params: Params) => this.heroService.getHero(+params['id']))
-      .subscribe(hero => this.hero = hero);
+      .switchMap((params: Params) => this.studentService.getStudent(+params['id']))
+      .subscribe(student => this.student = student);
   }
 
   save(): void {
-    this.heroService.update(this.hero)
+    this.studentService.update(this.student)
       .then(() => this.goBack());
   }
 
@@ -37,8 +37,8 @@ export class HeroDetailComponent implements OnInit {
     this.location.back();
   }
 
-  delete(hero: Hero): void {
-    this.heroService.delete(hero.id)
+  delete(student: Student): void {
+    this.studentService.delete(student.id)
     .then(() => this.goBack());
   }
 

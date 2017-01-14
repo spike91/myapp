@@ -1,0 +1,26 @@
+<div *ngIf="student" (click)="onSelect(student)" [class.selected]="student === selectedstudent">
+  <h2>{{student.name}} details!</h2>
+  <div>
+    <label>id: </label>{{student.id}}
+    <br>
+    <label>group: </label>{{student.group}}
+    <br>
+    <label>name: </label>{{student.name}}
+    <br>
+    <label>email: </label>{{student.email}}
+      <input [(ngModel)]="student.email" placeholder="email" />
+    <br>
+    <label>tel.: </label>{{student.telephone}}
+      <input [(ngModel)]="student.telephone" placeholder="telephone" />
+    <br>
+  <button (click)="goBack()">Back</button>
+  <button (click)="save()">Save</button>
+  <button (click)="delete(student); $event.stopPropagation()">Delete</button>
+</div>
+
+
+<!--
+Copyright 2016 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->

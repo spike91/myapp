@@ -2,16 +2,16 @@ import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { DashboardComponent }   from './dashboard.component';
-import { HeroesComponent }      from './heroes.component';
-import { HeroDetailComponent }  from './hero-detail.component';
+import { StudentsComponent }      from './students.component';
+import { StudentDetailComponent }  from './student-detail.component';
 import { Rdir31Component }  from './rdir31.component';
 import { Rdir32Component }  from './rdir32.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
   { path: 'dashboard',  component: DashboardComponent },
-  { path: 'detail/:id', component: HeroDetailComponent },
-  { path: 'heroes',     component: HeroesComponent },
+  { path: 'detail/:id', component: StudentDetailComponent },
+  { path: 'students',     component: StudentsComponent },
   { path: 'rdir31',     component: Rdir31Component },
   { path: 'rdir32',     component: Rdir32Component }
 ];

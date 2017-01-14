@@ -13,10 +13,10 @@ import { InMemoryDataService }  from './in-memory-data.service';
 
 import { AppComponent }         from './app.component';
 import { DashboardComponent }   from './dashboard.component';
-import { HeroesComponent }      from './heroes.component';
-import { HeroDetailComponent }  from './hero-detail.component';
-import { HeroService }          from './hero.service';
-import { HeroSearchComponent }  from './hero-search.component';
+import { StudentsComponent }      from './students.component';
+import { StudentDetailComponent }  from './student-detail.component';
+import { StudentService }          from './student.service';
+import { StudentSearchComponent }  from './student-search.component';
 import { Rdir31Component }      from './rdir31.component';
 import { Rdir32Component }      from './rdir32.component';
 
@@ -31,13 +31,13 @@ import { Rdir32Component }      from './rdir32.component';
   declarations: [
     AppComponent,
     DashboardComponent,
-    HeroDetailComponent,
-    HeroesComponent,
-    HeroSearchComponent,
+    StudentDetailComponent,
+    StudentsComponent,
+    StudentSearchComponent,
     Rdir31Component,
     Rdir32Component
   ],
-  providers: [ HeroService ],
+  providers: [ StudentService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

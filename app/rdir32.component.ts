@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router }            from '@angular/router';
-import { Hero }                from './hero';
-import { HeroService }         from './hero.service';
-import { HeroesComponent }     from './heroes.component'
+import { Student }                from './student';
+import { StudentService }         from './student.service';
+import { StudentsComponent }     from './students.component'
 @Component({
   moduleId: module.id,
   selector: 'my-rdir32',
@@ -10,17 +10,17 @@ import { HeroesComponent }     from './heroes.component'
   styleUrls: [ 'rdir32.component.css' ]
 })
 export class Rdir32Component implements OnInit {
-  heroes: Hero[];
-  selectedHero: Hero;
+  students: Student[];
+  selectedStudent: Student;
 
   constructor(
-    private heroService: HeroService,
+    private studentService: StudentService,
     private router: Router) { }
 
-  getHeroes(): void {
-    this.heroService
-        .getHeroes()
-        .then(heroes => this.heroes = heroes);
+  getStudents(): void {
+    this.studentService
+        .getStudents()
+        .then(students => this.students = students);
   }
 
   add(name: string, group: string): void {
@@ -28,33 +28,33 @@ export class Rdir32Component implements OnInit {
     group = group.trim();
     if (!name) { return; }
     if (!group) { return; }
-    this.heroService.create(name, group)
-      .then(hero => {
-        this.heroes.push(hero);
-        this.selectedHero = null;
+    this.studentService.create(name, group)
+      .then(student => {
+        this.students.push(student);
+        this.selectedStudent = null;
       });
   }
 
 
-  delete(hero: Hero): void {
-    this.heroService
-        .delete(hero.id)
+  delete(student: Student): void {
+    this.studentService
+        .delete(student.id)
         .then(() => {
-          this.heroes = this.heroes.filter(h => h !== hero);
-          if (this.selectedHero === hero) { this.selectedHero = null; }
+          this.students = this.students.filter(h => h !== student);
+          if (this.selectedStudent === student) { this.selectedStudent = null; }
         });
   }
 
   ngOnInit(): void {
-    this.getHeroes();
+    this.getStudents();
   }
 
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
+  onSelect(student: Student): void {
+    this.selectedStudent = student;
   }
 
   gotoDetail(): void {
-    this.router.navigate(['/detail', this.selectedHero.id]);
+    this.router.navigate(['/detail', this.selectedStudent.id]);
   }
 }
 

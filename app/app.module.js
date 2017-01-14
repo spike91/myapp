@@ -19,10 +19,10 @@ var angular_in_memory_web_api_1 = require('angular-in-memory-web-api');
 var in_memory_data_service_1 = require('./in-memory-data.service');
 var app_component_1 = require('./app.component');
 var dashboard_component_1 = require('./dashboard.component');
-var heroes_component_1 = require('./heroes.component');
-var hero_detail_component_1 = require('./hero-detail.component');
-var hero_service_1 = require('./hero.service');
-var hero_search_component_1 = require('./hero-search.component');
+var students_component_1 = require('./students.component');
+var student_detail_component_1 = require('./student-detail.component');
+var student_service_1 = require('./student.service');
+var student_search_component_1 = require('./student-search.component');
 var rdir31_component_1 = require('./rdir31.component');
 var rdir32_component_1 = require('./rdir32.component');
 var AppModule = (function () {
@@ -40,13 +40,13 @@ var AppModule = (function () {
             declarations: [
                 app_component_1.AppComponent,
                 dashboard_component_1.DashboardComponent,
-                hero_detail_component_1.HeroDetailComponent,
-                heroes_component_1.HeroesComponent,
-                hero_search_component_1.HeroSearchComponent,
+                student_detail_component_1.StudentDetailComponent,
+                students_component_1.StudentsComponent,
+                student_search_component_1.StudentSearchComponent,
                 rdir31_component_1.Rdir31Component,
                 rdir32_component_1.Rdir32Component
             ],
-            providers: [hero_service_1.HeroService],
+            providers: [student_service_1.StudentService],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])

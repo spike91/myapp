@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Hero }        from './hero';
-import { HeroService } from './hero.service';
-import { HeroesComponent } from './heroes.component';
+import { Student }        from './student';
+import { StudentService } from './student.service';
+import { StudentsComponent } from './students.component';
 
 @Component({
   moduleId: module.id,
@@ -11,15 +11,14 @@ import { HeroesComponent } from './heroes.component';
   styleUrls: [ 'dashboard.component.css' ]
 })
 export class DashboardComponent implements OnInit {
-  heroes: Hero[] = [];
+  students: Student[] = [];
 
-  constructor(private heroService: HeroService,
-              /*private heroesComponent: HeroesComponent,*/) { }
+  constructor(private studentService: StudentService) { }
 
 
   ngOnInit(): void {
-    this.heroService.getHeroes()
-      .then(heroes => this.heroes = heroes.slice(1, 5));
+    this.studentService.getStudents()
+      .then(students => this.students = students.slice(1, 5));
   }
 
 

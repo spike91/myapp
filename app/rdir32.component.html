@@ -5,12 +5,12 @@
     Add
   </button>
 </div>
-<ul class="heroes">
-  <p *ngFor="let hero of heroes" (click)="onSelect(hero)"
-      [class.selected]="hero === selectedHero" (click)="gotoDetail()">
-  <li *ngIf="hero.group==='RDIR32'">
-    <span class="badge" >{{hero.id}}</span>
-    <span>{{hero.name}}</span>
+<ul class="students">
+  <p *ngFor="let student of students" (click)="onSelect(student)"
+      [class.selected]="student === selectedStudent" (click)="gotoDetail()">
+  <li *ngIf="student.group==='RDIR32'">
+    <span class="badge" >{{student.id}}</span>
+    <span>{{student.name}}</span>
 </li>
 </p>
 </ul>
