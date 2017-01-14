@@ -21,21 +21,7 @@ export class DashboardComponent implements OnInit {
     this.heroService.getHeroes()
       .then(heroes => this.heroes = heroes.slice(1, 5));
   }
-  /*add(name: string, group: string): void {
-    this.heroesComponent.add(name, group);
-  }*/
 
-  add(name: string, group: string): void {
-    name = name.trim();
-    group = group.trim();
-    if (!name) { return; }
-    if (!group) { return; }
-    this.heroService.create(name, group)
-      .then(hero => {
-        this.heroes.push(hero);
-        this.selectedHero = null;
-      });
-  }
 
 }
 

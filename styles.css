@@ -14,7 +14,7 @@ body {
 }
 
 body, input[text], button {
-  color: #888;
+  color: 	#000000;/*#888;*/
   font-family: Cambria, Georgia;
 }
 a {
@@ -38,6 +38,35 @@ button:disabled {
   color: #aaa;
   cursor: auto;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  position: relative;
+  min-height: 100%;
+}
+.content {
+  padding-bottom: 90px;
+}
+.footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+
+	clear: both;
+	text-align: center;
+	color: #706963;
+	font-size: 11px;
+}
+
+
 
 /* Navigation link styles */
 nav a {

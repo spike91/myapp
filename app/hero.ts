@@ -2,6 +2,8 @@ export class Hero {
   id: number;
   group: string;
   name: string;
+  email: string;
+  telephone: string;
 }
 
 

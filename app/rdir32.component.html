@@ -1,21 +1,16 @@
-<h2>My Heroes</h2>
+<h2>Students of DRIR32 group</h2>
 <div>
-  <label>Hero name:</label> <input #heroName />
-<br>
-  <label>Hero group:</label> <input #heroGroup />
-  <button (click)="add(heroName.value, heroGroup.value); heroName.value=''; heroGroup.value=''">
+  <label>Student name:</label> <input #studentName />
+  <button (click)="add(studentName.value, 'RDIR32'); studentName.value=''">
     Add
   </button>
 </div>
 <ul class="heroes">
   <p *ngFor="let hero of heroes" (click)="onSelect(hero)"
-      [class.selected]="hero === selectedHero">
+      [class.selected]="hero === selectedHero" (click)="gotoDetail()">
   <li *ngIf="hero.group==='RDIR32'">
     <span class="badge" >{{hero.id}}</span>
     <span>{{hero.name}}</span>
-    <button class="delete"
-      (click)="delete(hero); $event.stopPropagation()">x</button>
-      <button class="delete" (click)="gotoDetail()">View </button>
 </li>
 </p>
 </ul>

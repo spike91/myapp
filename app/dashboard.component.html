@@ -1,4 +1,4 @@
-<h3>Top Heroes</h3>
+<h3 >Top students</h3>
 <div class="grid grid-pad">
   <a *ngFor="let hero of heroes"  [routerLink]="['/detail', hero.id]"  class="col-1-4">
     <div class="module hero">
@@ -6,14 +6,7 @@
     </div>
   </a>
 </div>
-<div>
-  <label>Hero name:</label> <input #heroName />
-<br>
-  <label>Hero group:</label> <input #heroGroup />
-  <button (click)="add(heroName.value, heroGroup.value); heroName.value=''; heroGroup.value=''">
-    Add
-  </button>
-</div>
+
 <hero-search></hero-search>
 
 
