@@ -4,7 +4,8 @@ import { Component }          from '@angular/core';
   moduleId: module.id,
   selector: 'my-app',
   template: `
-    <h1>{{title}}</h1>
+  <div style="background-color: #607D8B;">
+    <h1><br></h1>
     
     <nav>
       <a routerLink="/dashboard" routerLinkActive="active">Dashboard</a>
@@ -12,7 +13,9 @@ import { Component }          from '@angular/core';
       <a routerLink="/rdir31" routerLinkActive="active">RDIR31</a>
       <a routerLink="/rdir32" routerLinkActive="active">RDIR32</a>
     </nav>
+    </div>
     <router-outlet></router-outlet>
+    
   `,
   styleUrls: ['app.component.css']
 })
