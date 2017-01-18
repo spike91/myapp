@@ -5,7 +5,7 @@ export class Student {
   email: string;
   telephone: string;
 }
-
+/* Oпределяем поля для класса студент.  Мы экспортируем класс Student из student.ts, потому что нам нужно ссылаться на него в файлах компонентов.*/
 
 /*
 Copyright 2016 Google Inc. All Rights Reserved.

@@ -35,7 +35,7 @@ var AppModule = (function () {
                 forms_1.FormsModule,
                 http_1.HttpModule,
                 angular_in_memory_web_api_1.InMemoryWebApiModule.forRoot(in_memory_data_service_1.InMemoryDataService),
-                app_routing_module_1.AppRoutingModule
+                app_routing_module_1.AppRoutingModule /* делаем видимым наш роутинг */
             ],
             declarations: [
                 app_component_1.AppComponent,

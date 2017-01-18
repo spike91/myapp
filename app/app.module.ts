@@ -25,8 +25,8 @@ import { Rdir32Component }      from './rdir32.component';
     BrowserModule,
     FormsModule,
     HttpModule,
-    InMemoryWebApiModule.forRoot(InMemoryDataService),
-    AppRoutingModule
+    InMemoryWebApiModule.forRoot(InMemoryDataService),  /* делаем видимым наш сервис с данными */
+    AppRoutingModule          /* делаем видимым наш роутинг */
   ],
   declarations: [
     AppComponent,
@@ -36,8 +36,9 @@ import { Rdir32Component }      from './rdir32.component';
     StudentSearchComponent,
     Rdir31Component,
     Rdir32Component
-  ],
-  providers: [ StudentService ],
+  ],            /* чтобы Angular распознал теги: <my-student> */
+  providers: [ StudentService ],    /* Массив providers указывает Angular, что нужно создать новый экземпляр HeroService,
+                                    когда он создает новый AppComponent. AppComponent может использовать этот сервис, чтобы получить героев, */
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

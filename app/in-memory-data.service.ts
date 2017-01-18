@@ -14,7 +14,7 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: 154123, group: 'RDIR31', name: 'Steve Heim'}
     ];
     return {students};
-  }
+  } /* создаем массив студентов и возвращаем переменную на него */
 }
 
 

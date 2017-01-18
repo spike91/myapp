@@ -13,6 +13,7 @@
     "tsc": "tsc",
     "tsc:w": "tsc -w"
   },
+  
   "keywords": [],
   "author": "",
   "license": "MIT",

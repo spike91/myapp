@@ -9,8 +9,8 @@ import { Rdir32Component }  from './rdir32.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: 'dashboard',  component: DashboardComponent },
-  { path: 'detail/:id', component: StudentDetailComponent },
+  { path: 'dashboard',  component: DashboardComponent },          /* path: роутер соответствует этому пути URL в адресной строке браузера (dashboard). */
+  { path: 'detail/:id', component: StudentDetailComponent },      /* component: компонент, который маршрутизатор должен создать, когда перейдёт по этому маршруту (DashboardComponent). */
   { path: 'students',     component: StudentsComponent },
   { path: 'rdir31',     component: Rdir31Component },
   { path: 'rdir32',     component: Rdir32Component }
